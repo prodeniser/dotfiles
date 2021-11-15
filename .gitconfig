@@ -1,0 +1,27 @@
+[user]
+	name = Preston Rodeniser
+	email = preston.rodeniser@rolemodelsoftware.com
+[alias]
+	aliases = config --get-regexp alias
+	ca = commit --amend
+	br = branch
+	cm = commit -m
+	co = checkout
+	la = !git config -l | grep alias | cut -c 7-
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+	oneline = log --oneline
+	pf = push --force-with-lease
+	pur = pull --rebase
+	ri = rebase -i
+	st = status
+[core]
+	excludesfile = /Users/prestonrodeniser/.gitignore_global
+	editor = vim
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /Users/jrodenis/.stCommitMsg
